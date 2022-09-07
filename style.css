@@ -5,3 +5,29 @@
   background-color: lightgoldenrodyellow;
   color: black;
  }
+
+
+ .button-container{
+  display: flex;
+  justify-content: center;
+
+
+ }
+
+ #questionButton{
+  background-color: lightcoral;
+  color: white;
+  padding: 1rem 2rem;
+  border-style: solid;
+  border-color: black;
+  border-radius: 10rem;
+  width: 50%;
+  font-weight: bold;
+  font-size: 1rem;
+ }
+
+
+ #question{
+  text-align: center;
+  margin: 3rem 0rem;
+ }
