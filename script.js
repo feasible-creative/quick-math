@@ -6,17 +6,27 @@
 
 
 
-function getRandomQuestion(){
-  return randomMath = 1+1;
+const mathQuestion = document.querySelector('#question');
+
+const button = document.querySelector('#questionButton')
+button.addEventListener('click', function nextQuestion(){
+  return test = mathQuestion.textContent = `${Math.floor(Math.random() * 20).toString()} + ${Math.floor(Math.random() * 20).toString()}`;
+
 }
 
-getRandomQuestion()
+
+
+)
 
 
 
 
-const mathQuestion = document.querySelector('#question');
-mathQuestion.textContent = randomMath;
+ // const mathQuestion = document.querySelector('#question');
+  // mathQuestion.textContent = "HI";
+  
+
+
+
 
 
 
