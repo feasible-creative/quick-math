@@ -6,23 +6,49 @@
 
 
 
+
+
 const mathQuestion = document.querySelector('#question');
 
 const button = document.querySelector('#questionButton')
+
+// button.addEventListener('click', function nextQuestion(){
+//   return test = mathQuestion.textContent = `${Math.floor(Math.random() * 25).toString()} + ${Math.floor(Math.random() * 25).toString()}`;
+
+  
+// })
+
 button.addEventListener('click', function nextQuestion(){
-  return test = mathQuestion.textContent = `${Math.floor(Math.random() * 25).toString()} + ${Math.floor(Math.random() * 25).toString()}`;
+  return num1 = Math.floor(Math.random() * 25).toString();
+  
+})
 
-}
-
-
-
-)
-
-
+button.addEventListener('click', function nextQuestion(){
+  return num2 = Math.floor(Math.random() * 25).toString();
+})
 
 
- // const mathQuestion = document.querySelector('#question');
-  // mathQuestion.textContent = "HI";
+button.addEventListener('click', function(){
+  return mathQuestion.textContent = `${num1} + ${num2}`;
+
+})
+
+button.addEventListener('click', function(){
+console.log(num1);
+console.log(num2);
+})
+
+
+
+
+
+
+
+
+
+
+//  const mathQuestion = document.querySelector('#question');
+//   mathQuestion.textContent = "HI";
   
 
 
