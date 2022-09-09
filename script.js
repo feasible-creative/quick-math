@@ -87,6 +87,36 @@ mathQuestion.textContent = "CORRECT!"
 
 
 
+const answerButton2 = document.querySelector('#answer2')
+
+answerButton2.addEventListener('click', function correctAnswer(){
+mathQuestion.textContent = "Wrong!"
+})
+
+
+const answerButton3 = document.querySelector('#answer3')
+
+answerButton3.addEventListener('click', function correctAnswer(){
+mathQuestion.textContent = "Wrong!"
+})
+
+
+const answerButton4 = document.querySelector('#answer4')
+
+answerButton4.addEventListener('click', function correctAnswer(){
+mathQuestion.textContent = "Wrong!"
+if (mathQuestion.textContent){
+  console.log('GAME OVER')
+};
+})
+
+
+
+
+
+
+
+
 
 
 
