@@ -10,12 +10,29 @@
  .button-container{
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
 
 
  }
 
+ .answers-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+ }
+
+
  #questionButton{
-  background-color: lightcoral;
+  background-color: lightblue;
+ }
+
+
+
+ button{
+  background-color: lightsalmon;
+  margin: .25rem 0rem;
   color: white;
   padding: 1rem 2rem;
   border-style: solid;
@@ -24,7 +41,9 @@
   width: 50%;
   font-weight: bold;
   font-size: 1rem;
+  transition: all 300ms;
  }
+
 
 
  #question{

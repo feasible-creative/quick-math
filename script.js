@@ -39,6 +39,48 @@ console.log(num2);
 })
 
 
+// Outputs correct answer to console
+
+button.addEventListener('click', function(){
+console.log(parseInt(num1)+parseInt(num2));
+  })
+  
+
+
+
+
+button.addEventListener('click', function(){
+const answer1 = document.getElementById('answer1');
+answer1.textContent = parseInt(num1)+parseInt(num2);
+
+      })
+
+button.addEventListener('click', function(){
+const answer1 = document.getElementById('answer2');
+answer1.textContent = parseInt(num1)+parseInt(num2)-(Math.floor(Math.random() * 3)+2);
+        
+})
+      
+
+button.addEventListener('click', function(){
+  const answer1 = document.getElementById('answer3');
+  answer1.textContent = parseInt(num1)+parseInt(num2)+(Math.floor(Math.random() * 3)+1);
+          
+  })
+          
+
+      
+
+  button.addEventListener('click', function(){
+  const answer1 = document.getElementById('answer4');
+  answer1.textContent = parseInt(num1)+parseInt(num2)-(Math.floor(Math.random() * 1)+1);
+            
+    })
+            
+  
+        
+      
+
 
 
 
