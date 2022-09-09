@@ -79,19 +79,13 @@ button.addEventListener('click', function(){
             
   
         
-      
+const answerButton = document.querySelector('#answer1')
+
+answerButton.addEventListener('click', function correctAnswer(){
+mathQuestion.textContent = "CORRECT!"
+})
 
 
-
-
-
-
-
-
-
-//  const mathQuestion = document.querySelector('#question');
-//   mathQuestion.textContent = "HI";
-  
 
 
 
