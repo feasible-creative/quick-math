@@ -15,72 +15,70 @@ const button = document.querySelector('#questionButton')
 // button.addEventListener('click', function nextQuestion(){
 //   return test = mathQuestion.textContent = `${Math.floor(Math.random() * 25).toString()} + ${Math.floor(Math.random() * 25).toString()}`;
 
-  
+
 // })
 
 
 
 
-function playGame(){
+function playGame() {
 
 
 
-button.addEventListener('click', function nextQuestion(){
-  return num1 = Math.floor(Math.random() * 25).toString();
-  
-})
+  button.addEventListener('click', function nextQuestion() {
+    num1 = Math.floor(Math.random() * 25).toString();
+    num2 = Math.floor(Math.random() * 25).toString();
+    mathQuestion.textContent = `${num1} + ${num2}`;
 
-button.addEventListener('click', function nextQuestion(){
-  return num2 = Math.floor(Math.random() * 25).toString();
-})
-
-button.addEventListener('click', function(){
-  return mathQuestion.textContent = `${num1} + ${num2}`;
-
-})
-
-
-
-button.addEventListener('click', function(){
-// console.log(num1);
-// console.log(num2);
-})
+  })
 
 
 
 
-// Array values
-
-// const answers = ["a", "b", "c", "d"];
-answers = []
-
-
-button.addEventListener('click', function(){
-  answers =[];
-  a = parseInt(num1) + parseInt(num2);
-  b = parseInt(num1)+parseInt(num2)-(Math.floor(Math.random() * 3)+2);
-  c = parseInt(num1)+parseInt(num2)+(Math.floor(Math.random() * 3)+1);
-  d = parseInt(num1)+parseInt(num2)-(Math.floor(Math.random() * 1)+1);
-  answers.push(a, b, c, d);
-  // console.log(answers);
-})
+  button.addEventListener('click', function () {
+    // console.log(num1);
+    // console.log(num2);
+  })
 
 
 
 
+  // Array values
 
-  button.addEventListener('click', function(){
-  for (let i = 0; i <= answers.length-1; i++){
-  const answerChoice = document.getElementById('answer'+(i+1));
-  answerChoice.textContent = answers[Math.floor(Math.random() * 4)]};
+  // const answers = ["a", "b", "c", "d"];
+  answers = []
 
-  // console.log(answers);
-  console.log(Math.floor(Math.random() * 4));
-  console.log(answers[Math.floor(Math.random() * 4)]);
-  // button.addEventListener('click', function(){
-  // console.log(`${a} is it`)
-    })
-  
+
+  button.addEventListener('click', function () {
+    answers = [];
+    a = parseInt(num1) + parseInt(num2);
+    b = parseInt(num1) + parseInt(num2) - (Math.floor(Math.random() * 3) + 2);
+    c = parseInt(num1) + parseInt(num2) + (Math.floor(Math.random() * 3) + 1);
+    d = parseInt(num1) + parseInt(num2) - (Math.floor(Math.random() * 1) + 1);
+    answers.push(a, b, c, d);
+    // console.log(answers);
+  })
+
+  button.addEventListener('click', function () {
+    numbersPicked = []
+    for (let i = 0; i <= answers.length - 1; i++) {
+      randomNum = Math.floor(Math.random() * 4);
+      
+      if(randomNum !== numbersPicked){
+        const answerChoice = document.getElementById('answer' + (i + 1));
+        answerChoice.textContent = answers[randomNum];
+        numbersPicked.push(randomNum);
+      };
+
+      console.log(numbersPicked);
+    };
+
+
+    // console.log(Math.floor(Math.random() * 4));
+    // console.log(answers[Math.floor(Math.random() * 4)]);
+
+  })
+
 
 
 
@@ -98,56 +96,6 @@ button.addEventListener('click', function(){
 playGame();
 
 
-// answers.push(a);
-// answers.push(b);
-// answers.push(c);
-
-
-
-// for (let i = 0; i <= answers.length-1; i++){
-
-//   button.addEventListener('click', function(){
-//     console.log(answers);
-//   const answer = document.getElementById('answer'+(i+1));
-//   answer.textContent = answers[Math.floor(Math.random() * 4)+1]})};
-
-
-//   button.addEventListener('click', function(){
-//   console.log(`${a} is it`)
-//     })
-  
-
-
-
-
-
-// button.addEventListener('click', function(){
-//   const answer1 = document.getElementById('answer1');
-//   answer1.textContent = a;
-  
-//         })
-
-        
-// button.addEventListener('click', function(){
-//   const answer2 = document.getElementById('answer2');
-//   answer2.textContent = b;
-  
-//         })
-
-
-// button.addEventListener('click', function(){
-// const answer1 = document.getElementById('answer3');
-// answer1.textContent = c;
-                  
-//           })
-                              
-        
-// button.addEventListener('click', function(){
-// const answer1 = document.getElementById('answer4');
-// answer1.textContent = d;
-                    
-//             })
-                    
 
 
 
@@ -169,22 +117,12 @@ playGame();
 
 
 
-// Outputs correct answer to console
-
-// button.addEventListener('click', function(){
-// console.log(parseInt(num1)+parseInt(num2));
-//   })
-  
 
 
 
 
 
 
-
-
-  
-        
 // const answerButton = document.querySelector('#answer1')
 
 // answerButton.addEventListener('click', function correctAnswer(){
