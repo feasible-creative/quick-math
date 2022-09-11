@@ -9,22 +9,10 @@
 
 
 const mathQuestion = document.querySelector('#question');
-
 const button = document.querySelector('#questionButton')
-
-// button.addEventListener('click', function nextQuestion(){
-//   return test = mathQuestion.textContent = `${Math.floor(Math.random() * 25).toString()} + ${Math.floor(Math.random() * 25).toString()}`;
-
-
-// })
-
-
 
 
 function playGame() {
-
-
-
   button.addEventListener('click', function nextQuestion() {
     num1 = Math.floor(Math.random() * 25).toString();
     num2 = Math.floor(Math.random() * 25).toString();
@@ -33,42 +21,37 @@ function playGame() {
   })
 
 
-
-
-  button.addEventListener('click', function () {
-    // console.log(num1);
-    // console.log(num2);
-  })
-
-
-
-
   // Array values
-
-  // const answers = ["a", "b", "c", "d"];
-  answers = []
-
-
   button.addEventListener('click', function () {
     answers = [];
     a = parseInt(num1) + parseInt(num2);
-    b = parseInt(num1) + parseInt(num2) - (Math.floor(Math.random() * 3) + 2);
-    c = parseInt(num1) + parseInt(num2) + (Math.floor(Math.random() * 3) + 1);
-    d = parseInt(num1) + parseInt(num2) - (Math.floor(Math.random() * 1) + 1);
+    b = parseInt(num1) + parseInt(num2) - (Math.floor(Math.random() * 3) + 1);
+    c = parseInt(num1) + parseInt(num2) + (Math.floor(Math.random() * 2) + 1);
+    d = parseInt(num1) + parseInt(num2) - (Math.floor(Math.random() * 2) + 3);
     answers.push(a, b, c, d);
-    // console.log(answers);
+
+    console.log(`${answers}`);
+``
+// Debugger for unique outputs only
+    // if (a === b || b === c || c === d){
+    //   console.log('ERROR')
+    // }
+    // else{console.log('success!')}
   })
 
   button.addEventListener('click', function () {
     numbersPicked = []
     for (let i = 0; i <= answers.length - 1; i++) {
       randomNum = Math.floor(Math.random() * 4);
-      
-      if(randomNum !== numbersPicked){
+
+      if (randomNum !== numbersPicked) {
         const answerChoice = document.getElementById('answer' + (i + 1));
         answerChoice.textContent = answers[randomNum];
         numbersPicked.push(randomNum);
-      };
+      }
+      else {
+        console.log('error')
+      }
 
       console.log(numbersPicked);
     };
