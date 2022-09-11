@@ -30,26 +30,57 @@ function playGame() {
     d = parseInt(num1) + parseInt(num2) - (Math.floor(Math.random() * 2) + 3);
     answers.push(a, b, c, d);
 
-    // console.log(`${answers}`);
-
     // Debugger for unique outputs only
+
     // if (a === b || b === c || c === d){
     //   console.log('ERROR')
     // }
     // else{console.log('success!')}
 
+  });
 
 
-
-
-  }
-
-
-
-
-  );
 
   // Output answer options in ABCD order
+
+
+
+
+
+
+
+  // const samples = [1, 2, 3, 4];
+
+  // function shuffle(array) {
+  
+  //   shuffledArray = [];
+  //   usedIndexes = [];
+  
+  
+  
+  //   let i = 0;
+  //   while (i < array.length){
+  //     let randomNumber = Math.floor(Math.random() * array.length);
+  //     if (!usedIndexes.includes(randomNumber)){
+  //       shuffledArray.push(array[randomNumber]);
+  //       usedIndexes.push(randomNumber);
+  //       i++;
+  //     }
+  //   }
+    
+  //   console.log(shuffledArray);
+  //   return shuffledArray
+  
+  
+  // }
+  
+  // shuffle(samples);
+  
+  
+
+
+
+
 
   button.addEventListener('click', function addToOptions() {
 
@@ -66,13 +97,6 @@ function playGame() {
 
 
 
-
-
-
-
-
-
-
   // button.addEventListener('click', function addToOptions(answers){
   //   for (var i = answers.length - 1; i > 0; i--) {
   //     var j = Math.floor(Math.random() * (i + 1));
@@ -85,34 +109,6 @@ function playGame() {
 
 
   // })
-
-
-
-  // button.addEventListener('click', function () {
-  //   numbersPicked = []
-  //   for (let i = 0; i <= 100; i++) {
-  //     randomNum = (Math.floor(Math.random() * 3) + 1);
-
-  //     const answerChoice = document.getElementById('answer' + (i + 1));
-
-  //     if (!numbersPicked.includes(randomNum)){
-
-  //       answerChoice.textContent = answers[randomNum];
-  //       numbersPicked.push(randomNum);
-  //     }
-
-
-  //     else {
-  //       break
-  //     }
-
-
-  //   };
-
-
-
-
-
 
 
 }
@@ -179,6 +175,8 @@ playGame();
 //   console.log('GAME OVER')
 // };
 // })
+
+
 
 
 
