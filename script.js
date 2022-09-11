@@ -30,43 +30,84 @@ function playGame() {
     d = parseInt(num1) + parseInt(num2) - (Math.floor(Math.random() * 2) + 3);
     answers.push(a, b, c, d);
 
-    console.log(`${answers}`);
-``
-// Debugger for unique outputs only
+    // console.log(`${answers}`);
+
+    // Debugger for unique outputs only
     // if (a === b || b === c || c === d){
     //   console.log('ERROR')
     // }
     // else{console.log('success!')}
-  })
 
-  button.addEventListener('click', function () {
-    numbersPicked = []
+
+
+
+
+  }
+
+
+
+
+  );
+
+  // Output answer options in ABCD order
+
+  button.addEventListener('click', function addToOptions() {
+
     for (let i = 0; i <= answers.length - 1; i++) {
-      randomNum = Math.floor(Math.random() * 4);
+      answerChoice = document.getElementById('answer' + (i + 1))
+      answerChoice.textContent = answers[i];
 
-      if (randomNum !== numbersPicked) {
-        const answerChoice = document.getElementById('answer' + (i + 1));
-        answerChoice.textContent = answers[randomNum];
-        numbersPicked.push(randomNum);
-      }
-      else {
-        console.log('error')
-      }
-
-      console.log(numbersPicked);
-    };
+    }
 
 
-    // console.log(Math.floor(Math.random() * 4));
-    // console.log(answers[Math.floor(Math.random() * 4)]);
-
-  })
+  }
+  )
 
 
 
 
 
 
+
+
+
+
+
+  // button.addEventListener('click', function addToOptions(answers){
+  //   for (var i = answers.length - 1; i > 0; i--) {
+  //     var j = Math.floor(Math.random() * (i + 1));
+
+  //        var temp = answers[i];
+  //        answers[i] = answers[j];
+  //        answers[j] = temp;
+  //    }
+  //    return answers;  
+
+
+  // })
+
+
+
+  // button.addEventListener('click', function () {
+  //   numbersPicked = []
+  //   for (let i = 0; i <= 100; i++) {
+  //     randomNum = (Math.floor(Math.random() * 3) + 1);
+
+  //     const answerChoice = document.getElementById('answer' + (i + 1));
+
+  //     if (!numbersPicked.includes(randomNum)){
+
+  //       answerChoice.textContent = answers[randomNum];
+  //       numbersPicked.push(randomNum);
+  //     }
+
+
+  //     else {
+  //       break
+  //     }
+
+
+  //   };
 
 
 
@@ -75,6 +116,8 @@ function playGame() {
 
 
 }
+
+
 
 playGame();
 
