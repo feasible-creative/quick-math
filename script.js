@@ -51,7 +51,7 @@ function playGame() {
 
   }
 
-  
+
   );
 
 
@@ -62,7 +62,8 @@ function playGame() {
       answerChoice = document.getElementById('answer' + (i + 1))
       answerChoice.textContent = shuffledArray[i];
 
-    }}
+    }
+  }
   )
 
 }
@@ -72,29 +73,22 @@ playGame();
 
 
 
-const answer1 = document.querySelector('#answer1');
-const answer2 = document.querySelector('#answer2');
-const answer3 = document.querySelector('#answer3');
-const answer4 = document.querySelector('#answer4');
+document.querySelectorAll('.answerButton').forEach(item => {
+  item.addEventListener('click', event => {
+    if (parseInt(item.textContent) === a){
+      console.log('WINNER!')
+      mathQuestion.textContent = "CORRECT!"
+    }
+    else{
+      console.log('WRONG!')
+      mathQuestion.textContent = "Wrong."
 
-answer1.addEventListener('click', function(){
-  console.log(shuffledArray[0])
+    }
 
-});
 
-answer2.addEventListener('click', function(){
-  console.log(shuffledArray[1])
 
-});
 
-answer3.addEventListener('click', function(){
-  console.log(shuffledArray[2])
-
-});
-
-answer4.addEventListener('click', function(){
-  console.log(shuffledArray[3])
-
+  })
 });
 
 
