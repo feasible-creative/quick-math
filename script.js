@@ -1,13 +1,3 @@
-// 1. Display rnadom math problem
-// 2. Timer starts at 0:10
-// 3. Input answer
-// 4. If correct, add +1 to score and continue to next question
-// 5. If incorrect [GAME OVER] - option to restart
-
-
-
-
-
 const mathQuestion = document.querySelector('#question');
 const button = document.querySelector('#questionButton')
 
@@ -25,7 +15,7 @@ function playGame() {
   button.addEventListener('click', function () {
     answers = [];
     a = parseInt(num1) + parseInt(num2);
-    b = parseInt(num1) + parseInt(num2) - (Math.floor(Math.random() * 3) + 1);
+    b = parseInt(num1) + parseInt(num2) - (Math.floor(Math.random() * 2) + 1);
     c = parseInt(num1) + parseInt(num2) + (Math.floor(Math.random() * 2) + 1);
     d = parseInt(num1) + parseInt(num2) - (Math.floor(Math.random() * 2) + 3);
     answers.push(a, b, c, d);
@@ -37,107 +27,75 @@ function playGame() {
     // }
     // else{console.log('success!')}
 
-  });
+    function shuffle(array) {
+
+      shuffledArray = [];
+      usedIndexes = [];
+
+      let i = 0;
+      while (i < array.length) {
+        let randomNumber = Math.floor(Math.random() * array.length);
+        if (!usedIndexes.includes(randomNumber)) {
+          shuffledArray.push(array[randomNumber]);
+          usedIndexes.push(randomNumber);
+          i++;
+        }
+      }
+      console.log(shuffledArray);
+      return shuffledArray
+    }
+
+    shuffle(answers);
 
 
 
-  // Output answer options in ABCD order
+  }
 
-
-
-
-
-
-
-  // const samples = [1, 2, 3, 4];
-
-  // function shuffle(array) {
   
-  //   shuffledArray = [];
-  //   usedIndexes = [];
-  
-  
-  
-  //   let i = 0;
-  //   while (i < array.length){
-  //     let randomNumber = Math.floor(Math.random() * array.length);
-  //     if (!usedIndexes.includes(randomNumber)){
-  //       shuffledArray.push(array[randomNumber]);
-  //       usedIndexes.push(randomNumber);
-  //       i++;
-  //     }
-  //   }
-    
-  //   console.log(shuffledArray);
-  //   return shuffledArray
-  
-  
-  // }
-  
-  // shuffle(samples);
-  
-  
-
-
+  );
 
 
 
   button.addEventListener('click', function addToOptions() {
 
-    for (let i = 0; i <= answers.length - 1; i++) {
+    for (let i = 0; i <= shuffledArray.length - 1; i++) {
       answerChoice = document.getElementById('answer' + (i + 1))
-      answerChoice.textContent = answers[i];
+      answerChoice.textContent = shuffledArray[i];
 
-    }
-
-
-  }
+    }}
   )
 
-
-
-
-  // button.addEventListener('click', function addToOptions(answers){
-  //   for (var i = answers.length - 1; i > 0; i--) {
-  //     var j = Math.floor(Math.random() * (i + 1));
-
-  //        var temp = answers[i];
-  //        answers[i] = answers[j];
-  //        answers[j] = temp;
-  //    }
-  //    return answers;  
-
-
-  // })
-
-
 }
-
-
 
 playGame();
 
 
 
 
+const answer1 = document.querySelector('#answer1');
+const answer2 = document.querySelector('#answer2');
+const answer3 = document.querySelector('#answer3');
+const answer4 = document.querySelector('#answer4');
 
+answer1.addEventListener('click', function(){
+  console.log(shuffledArray[0])
 
+});
 
+answer2.addEventListener('click', function(){
+  console.log(shuffledArray[1])
 
+});
 
+answer3.addEventListener('click', function(){
+  console.log(shuffledArray[2])
 
+});
 
+answer4.addEventListener('click', function(){
+  console.log(shuffledArray[3])
 
-
-
-
-
-
-
-
-
-
-
+});
 
 
 
@@ -175,12 +133,6 @@ playGame();
 //   console.log('GAME OVER')
 // };
 // })
-
-
-
-
-
-
 
 
 
