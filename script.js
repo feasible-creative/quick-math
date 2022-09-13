@@ -1,4 +1,4 @@
-const mathQuestion = document.querySelector('#question');
+const mathQuestion = document.querySelector('.question');
 const button = document.querySelector('#questionButton');
 const answerButton = document.querySelector('#answer1');
 const answerButton2 = document.querySelector('#answer2');
@@ -15,15 +15,13 @@ function playGame() {
     answerButton2.style.removeProperty('background-color');
     answerButton3.style.removeProperty('background-color');
     answerButton4.style.removeProperty('background-color');
+    button.textContent = "Next Question";
 
     
 
   })
 
 
-
-
-   
 
 
 
@@ -100,6 +98,7 @@ playGame();
           item.style.backgroundColor = 'green';
           console.log('WINNER!')
           mathQuestion.textContent = "CORRECT!"
+     
         }
         else {
           item.style.backgroundColor = 'red';
@@ -112,6 +111,8 @@ playGame();
 
 
       })
+
+      
     });
 
 
