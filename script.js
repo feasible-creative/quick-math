@@ -6,6 +6,7 @@ const answerButton3 = document.querySelector('#answer3');
 const answerButton4 = document.querySelector('#answer4');
 
 
+
 function playGame() {
   button.addEventListener('click', function nextQuestion() {
     num1 = Math.floor(Math.random() * 25).toString();
@@ -15,6 +16,11 @@ function playGame() {
     answerButton2.style.removeProperty('background-color');
     answerButton3.style.removeProperty('background-color');
     answerButton4.style.removeProperty('background-color');
+
+    answerButton.style.display = "block";
+    answerButton2.style.display = "block";
+    answerButton3.style.display = "block";
+    answerButton4.style.display = "block";
     button.textContent = "Next Question";
 
     

@@ -44,8 +44,12 @@ h2{
    justify-content: center;
    align-items: center;
 
+
  }
 
+ .answerButton{
+  display:none
+ }
 
  #questionButton {
    background-color: rgb(58, 139, 166);
@@ -68,6 +72,7 @@ h2{
    box-shadow: 0rem .25rem .25rem rgba(0, 0, 0, .25);
    cursor: pointer;
  }
+
 
 
 
